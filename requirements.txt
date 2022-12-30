@@ -33,4 +33,4 @@ typing_extensions==4.4.0
 urllib3==1.26.13
 websockets==10.4
 wsproto==1.2.0
-yiri-mirai==0.2.7
+yiri-mirai==0.2.6

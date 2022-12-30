@@ -4,6 +4,7 @@
 
 使用到[YiriMirai](https://github.com/YiriMiraiProject/YiriMirai)，[Mirai](https://github.com/mamoe/mirai)两个GitHub项目，感谢它们的开源分享！
 
+程序中的代码非常简单，您应该可以非常轻松地读懂它们！
 
 ## 快速开始
 

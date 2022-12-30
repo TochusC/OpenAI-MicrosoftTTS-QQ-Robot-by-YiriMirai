@@ -2,7 +2,7 @@ from mirai import Plain, At, Mirai, WebSocketAdapter, FriendMessage, GroupMessag
 import re
 import openai
 
-openai.api_key = "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"
+openai.api_key = "请在这里输入你的OpenAI API KEY"
 
 header = '你是一个AI聊天机器人，精通各种网络流行语，当你遇到答案不能确定的问题的时候，要说明“我不确定”,再给出相应的回答,你的话语应尽量避免提供不正确，不属实的信息但同时又尽量充分详细。\n\n'
 example = '对方: 请你做下自我介绍\n' \
@@ -170,15 +170,44 @@ def ans_to_del():
 
 
 if __name__ == '__main__':
-    bot = Mirai(3079391406, adapter=WebSocketAdapter(
-        verify_key='INITKEYQeNSTkvT', host='localhost', port=8080
-    ))
+    bot = Mirai(请在这里输入机器人QQ号, adapter=WebSocketAdapter(
+        verify_key='请在这里输入miraiHTTPs中的verifyKEY', host='localhost', port=8080   #默认端口号是8080，如果您进行了修改
+    ))                                                                                   #请在这里输入对应的端口号
 
 
     @bot.on(FriendMessage)
     def on_friend_message(event: FriendMessage):
-        if str(event.message_chain) == '你好':
-            return bot.send(event, 'Hello, World!')
+    
+        raw_text = event.message_chain.__repr__();
+
+        plain = str(event.message_chain[Plain])
+        text = re.search(r"\[Plain\('(.*)'\)\]", plain)[1].strip()
+        command = re.search(r"#(.*)#", text)
+        prompt = re.search(r"(?:#.*?#)?(.*)", text)[1].strip()
+
+        if command is None:
+            return bot.send(event, gen_chat(prompt))
+        else:
+            command = command[1]
+            command = command.split(',')
+
+            if command[0] == "生成图片":
+                return bot.send(event, Image(url=gen_img(prompt)))
+            if command[0] == "提问":
+                return bot.send(event, gen_ans(prompt))
+            if command[0] == "人格设置":
+                return bot.send(event, def_header(prompt))
+            if command[0] == '人格选择':
+                return bot.send(event, set_per(prompt))
+            if command[0] == "人格说明":
+                return bot.send(event, self_exp())
+            if command[0] == '重置':
+                return bot.send(event, reset())
+            if command[0] == "清除聊天记录":
+                return bot.send(event, ans_to_del())
+            else:
+                return bot.send(event, gen_chat(prompt))
+
 
 
     @bot.on(GroupMessage)

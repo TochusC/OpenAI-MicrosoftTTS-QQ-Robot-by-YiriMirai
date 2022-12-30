@@ -175,7 +175,7 @@ def ans_to_del():
 
 if __name__ == '__main__':
     bot = Mirai(qq_number, adapter=WebSocketAdapter(
-        verify_key=verifyKEY', host='localhost', port=g_port  
+        verify_key=verifyKEY, host='localhost', port=g_port  
     ))                                                                               
 
 

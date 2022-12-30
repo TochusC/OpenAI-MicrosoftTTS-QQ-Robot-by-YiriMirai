@@ -1,4 +1,4 @@
-# YiriMirai-OpenAI
+# YiriMirai+OpenAI
 
 通过YiriMirai调用[OpenAI](https://openai.com/)提供的API，而实现的QQ AI机器人。
 

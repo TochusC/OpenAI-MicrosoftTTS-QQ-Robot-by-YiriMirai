@@ -4,7 +4,7 @@
 
 使用到[YiriMirai](https://github.com/YiriMiraiProject/YiriMirai)，[Mirai](https://github.com/mamoe/mirai)两个GitHub项目，感谢它们的开源分享！
 
-程序中的代码非常简单，您应该可以非常轻松地读懂它们！
+程序中的代码非常简单，您应该可以非常轻松地读懂它们，并做出修改。
 
 ## 快速开始
 
@@ -69,3 +69,4 @@
 如果遇到其他问题或错误，欢迎您向我询问！
 
 这是我第一次在GitHub上发布比较用心的开源项目，如果我做的有什么地方不对，请告诉我，我会对您非常感激的！
+

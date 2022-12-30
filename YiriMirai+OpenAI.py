@@ -2,7 +2,11 @@ from mirai import Plain, At, Mirai, WebSocketAdapter, FriendMessage, GroupMessag
 import re
 import openai
 
-openai.api_key = "请在这里输入你的OpenAI API KEY"
+
+openai.api_key = "请在这里输入您的OpenAI API KEY"
+verifyKEY = "xxxxxxxxx"  #请在这里输入miraiHTTPS中的verifyKEY
+qq_number = 123456 #请在这里输入您的机器人QQ号
+g_port = 8080 #默认端口号是8080，如果您进行了修改，请输入相应的端口。
 
 header = '你是一个AI聊天机器人，精通各种网络流行语，当你遇到答案不能确定的问题的时候，要说明“我不确定”,再给出相应的回答,你的话语应尽量避免提供不正确，不属实的信息但同时又尽量充分详细。\n\n'
 example = '对方: 请你做下自我介绍\n' \
@@ -170,9 +174,9 @@ def ans_to_del():
 
 
 if __name__ == '__main__':
-    bot = Mirai(请在这里输入机器人QQ号, adapter=WebSocketAdapter(
-        verify_key='请在这里输入miraiHTTPs中的verifyKEY', host='localhost', port=8080   #默认端口号是8080，如果您进行了修改
-    ))                                                                                   #请在这里输入对应的端口号
+    bot = Mirai(qq_number, adapter=WebSocketAdapter(
+        verify_key=verifyKEY', host='localhost', port=g_port  
+    ))                                                                               
 
 
     @bot.on(FriendMessage)

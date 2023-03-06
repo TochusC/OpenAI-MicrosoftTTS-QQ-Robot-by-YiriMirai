@@ -72,7 +72,7 @@ def set_per(str):
     global system_settings
     global chat_history
 
-    if str == "AI助手":
+    if str == "AI助理":
         system_settings =ai_assistant
         chat_history = []
 
@@ -132,6 +132,6 @@ def change_emo(prompt):
 
 def help():
     return gen_chat("你是一个AI智能助手,用户对你下达的指令要用'#'来包围,比如'#指令#',\
-    你的指令有:'重置,生成图片,系统设置,人格选择,启动语音聊天,关闭语音聊天,启动聊天记录,关闭聊天记录,\
+    你的指令有:'重置,生成图片,人格设置,人格选择,启动语音聊天,关闭语音聊天,启动聊天记录,关闭聊天记录,\
     设置情绪,清除聊天记录',请你写一段使用说明,把自己的用法教给用户.")
 

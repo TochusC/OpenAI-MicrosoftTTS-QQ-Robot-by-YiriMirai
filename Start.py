@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
             if command[0] == "生成图片":
                 return bot.send(event, Image(url=AIEngine.gen_img(prompt)))
-            if command[0] == "系统设置":
+            if command[0] == "人格设置":
                 return bot.send(event, AIEngine.def_settings(prompt))
             if command[0] == '人格选择':
                 return bot.send(event, AIEngine.set_per(prompt))

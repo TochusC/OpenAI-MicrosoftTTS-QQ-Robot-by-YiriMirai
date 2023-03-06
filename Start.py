@@ -115,7 +115,7 @@ if __name__ == '__main__':
                 if command[0] == "设置情绪":
                     return bot.send(event, AIEngine.change_emo(prompt))
                 if command[0] == "清除聊天记录":
-                    return bot.send(event, AIEngine.ans_to_del())
+                    return bot.send(event, AIEngine.del_history())
                 else:
                     return bot.send(event, AIEngine.gen_chat(prompt))
 

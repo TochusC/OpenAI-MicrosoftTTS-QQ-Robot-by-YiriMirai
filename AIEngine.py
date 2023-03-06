@@ -92,7 +92,7 @@ def del_history():
 
     chat_history = []
 
-    return gen_chat("你与用户进行了愉快的交流，但用户选择了清除你的记忆和聊天记录，请你用'聊天记录已清除'开头，写一段话，请使用理性的话语")
+    return gen_chat("你与用户进行了愉快的交流，但用户选择清除你的记忆和聊天记录，请你用'聊天记录已清除'开头，写一段话")
 
 def start_voi():
     global has_voice
@@ -110,14 +110,14 @@ def start_mem():
 
     has_memory = True
 
-    return gen_chat("用户启动了你的记忆模块，使你可以记住与用户间的互动，请以此为背景写一句话")
+    return gen_chat("我启动了你的记忆模块，使你可以记住与我的对话")
 
 def end_mem():
     global has_memory
 
     has_memory = True
 
-    return gen_chat("用户关闭了你的记忆模块，使你可以无法记住与用户间的互动，请以此为背景写一句话")
+    return gen_chat("我关闭了你的记忆模块，使你无法记住与我的对话")
 
 def change_emo(prompt):
 

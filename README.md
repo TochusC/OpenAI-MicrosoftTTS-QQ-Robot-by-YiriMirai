@@ -12,7 +12,10 @@
 
 在使用前，请确保您安装了Python，并在目录下通过`pip install -r requirements.txt`安装所需要的库。
 
-然后，您需要改动Start.py文件中的第10-19行的几项参数，分别输入您miraiHTTP中的verifyKEY，机器人QQ号， 端口号，以及OpenAI的API KEY和微软TTS服务的API KEY及服务区域。
+然后，您需要改动Start.py文件中的第10-19行的几项参数，
+
+分别输入您miraiHTTP中的verifyKEY，机器人QQ号， 端口号，以及OpenAI的API KEY和微软TTS服务的API KEY及服务区域。
+
 如果您不需要语言聊天功能的话，可以省略掉微软TTS服务的API KEY。
 
 

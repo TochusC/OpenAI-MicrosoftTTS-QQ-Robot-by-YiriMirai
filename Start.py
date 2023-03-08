@@ -7,15 +7,15 @@ from mirai.models import NewFriendRequestEvent
 import AIEngine
 import VoiceEngine
 
-qq_number = 205329624  # 请在这里输入您的机器人QQ号
+qq_number = 12345678  # 请在这里输入您的机器人QQ号
 g_port = 8080  # 默认端口号是8080，如果您进行了修改，请输入相应的端口。
-verifyKEY = "INITKEYF7MdE0SC"  # 请在这里输入miraiHTTPS中的verifyKEY
+verifyKEY = ""  # 请在这里输入miraiHTTPS中的verifyKEY
 
-openai_api_key = "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"  # 请在这里输入你的OpenAI API KEY
+openai_api_key = ""  # 请在这里输入你的OpenAI API KEY
 
 # 可选
 # 如果不启动语音功能,就不需要输入
-speech_key = "32530f5917e7417fbd891d61f6d1af37"  # 请在这里输入微软文字转语音服务的API KEY
+speech_key = ""  # 请在这里输入微软文字转语音服务的API KEY
 service_region = "eastus"  # 在这里输入服务所在的区域
 
 def initialize():

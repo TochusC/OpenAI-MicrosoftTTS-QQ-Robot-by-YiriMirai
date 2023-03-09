@@ -16,7 +16,7 @@
 
 分别输入您miraiHTTP中的verifyKEY，机器人QQ号， 端口号，以及OpenAI的API KEY和微软TTS服务的API KEY及服务区域。
 
-如果您不需要语言聊天功能的话，可以省略掉微软TTS服务的API KEY。
+如果您不需要语音聊天功能的话，可以省略掉微软TTS服务的API KEY。
 
 
 接下来,请您先修改MiraiConsole中的http通讯设置文件中的内容，文件位置为config\net.mamoe.mirai-api-http\settings.yml。

@@ -18,20 +18,19 @@ has_voice = False
 has_memory = False
 def gen_chat(str):
     openai.api_key = openai_api_key
+    
     global chat_history
-    global has_memory
-    global has_voice
 
     request = [{"role": "user", "content": "{}".format(str)}]
 
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        messages=[system_settings] + chat_history +request
+        messages=[system_settings] + chat_history + request
     )
     chat = response["choices"][0]["message"]["content"]
 
     if has_memory:
-        chat_history +=[{"role": "assistant", "content": "".format(chat)}] + request
+        chat_history += request + [{"role": "assistant", "content": "".format(chat)}]
 
     if has_voice:
         return VoiceEngine.get_voi(chat)
@@ -73,7 +72,7 @@ def set_per(str):
     global chat_history
 
     if str == "AI助理":
-        system_settings =ai_assistant
+        system_settings = ai_assistant
         chat_history = []
 
         return gen_chat("你能自我介绍一下吗?介绍的时候请以'好的'开头")
@@ -96,13 +95,16 @@ def del_history():
 
 def start_voi():
     global has_voice
+    
     has_voice = True
+    
     return gen_chat("接下来让我们开始语音聊天吧")
 
 def end_voi():
-
     global has_voice
+    
     has_voice = False
+    
     return gen_chat("让我们取消语音聊天吧。")
 
 def start_mem():
@@ -123,8 +125,10 @@ def change_emo(prompt):
 
     if prompt == "快乐":
         VoiceEngine.emotion = 'Cheerful'
+        
     elif prompt == "难过":
         VoiceEngine.emotion = 'sad'
+        
     elif prompt == "感性":
         VoiceEngine.emotion = 'lyrical'
 

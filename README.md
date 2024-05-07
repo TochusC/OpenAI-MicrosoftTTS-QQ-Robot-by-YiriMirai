@@ -2,6 +2,7 @@
 
 ### 支持语音聊天的ChatGPT QQ机器人
 
+
 通过YiriMirai调用[OpenAI](https://openai.com/)和[Microsoft TTS服务](https://azure.microsoft.com/products/cognitive-services/text-to-speech/#overview)提供的API，而实现的QQ AI机器人。
 
 使用到[YiriMirai](https://github.com/YiriMiraiProject/YiriMirai)，[Mirai](https://github.com/mamoe/mirai)两个GitHub项目，感谢它们的开源分享！
@@ -10,7 +11,23 @@
 
 程序中的代码非常简单，您应该可以非常轻松地读懂它们，并做出修改🛠️。
 
+## 使用预览✨：
+
+---
+
+![img.png](docs/img/005.png)
+
+![img.png](docs/img/002.png)
+
+![img.png](docs/img/004.png)
+
+![img.png](docs/img/003.png)
+
+
+
 ## 快速开始🔧
+
+---
 
 在使用前，请确保您安装了Python，并在目录下通过`pip install -r requirements.txt`安装所需要的库。
 
@@ -42,6 +59,8 @@
 
 ## 进一步说明❔
 
+---
+
 - 如果您的如何获取OpenAI API KEY有疑问：
 
   首先您需要注册一个OpenAI账号，您可以参考以下两个网站：
@@ -57,6 +76,8 @@
  
 
 ## 使用方法💻
+
+---
 
 您在私聊中直接向机器人发送语句即可得到回复，而在群聊中则需要先@机器人，才可得到相应回复。
 
@@ -108,13 +129,16 @@
       
   - `#重置#`
       将机器人重置回默认人格。
-      
 
-## 其他
+
+
+## 其他💓
+
+---
 
 如果遇到其他问题或错误，欢迎您向我询问！
 
-这是我第一次在GitHub上发布比较用心的开源项目，
+这是我第一次在GitHub上发布比较用心的开源项目🥰，
 
 如果我有什么地方做得不对，或代码有写得不好的部分，请告诉我，我会对您非常感激的！
 
